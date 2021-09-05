@@ -1,0 +1,298 @@
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 /License: none (public domain)*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';  content: none;}
+table {border-collapse: collapse;  border-spacing: 0;}
+/*  */
+
+
+
+
+
+                    /* START */
+body {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #FDEFEF;
+}
+
+h2,p,h3,h4,span,input,label,select,button {font-family: 'Quicksand', sans-serif;}
+h2,label {font-size: 20px;  font-weight: bold;}
+p,button,select {font-size: 17px;}
+h3 {font-size: 14px;}
+h4 {font-size: 11px;}
+
+.play-change-anim {
+    animation-name: change-anim;
+    animation-duration: 1s;
+}
+
+@keyframes change-anim {
+    from {background-color: limegreen;}
+    to {background-color: white;}
+}
+
+
+
+
+/* awal header */
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    box-sizing: border-box;
+    width: 80%;
+    height: 70px;
+    left: 10%;
+    right: 10%;
+    top: 0px;
+    z-index: 9999;
+    background-color: #F4DFD0;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 15px 15px;
+}
+
+.logo {
+    display: flex;
+    padding-left: 20px;
+    gap: 10px;
+    align-items: center;
+}
+
+.api-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 20px;
+    column-gap: 10px;
+    row-gap: 5px;
+}
+
+.refresh-button{
+    background-color: lightsalmon;
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    line-height: 30px;
+}
+
+.refresh-button:active {
+    background-color: red;
+}
+/* akhir header */
+
+
+
+
+
+                    /* MAIN */
+
+/* awal up */
+.up {display: flex;  margin-top: 90px;}
+
+section.left {width: 50%;  padding: 20px; }
+
+.left h2 {margin-top: 8%;  margin-bottom: 20px;}
+
+.left form {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 5fr;
+    grid-template-areas: 
+    "nama inputnama"
+    "kategori select"
+    "submit submit";
+    flex-direction: column;
+}
+.nama-label {grid-area: nama;  align-self: center;}
+.nama-input {grid-area: inputnama;  align-self: center;}
+.kat-label {grid-area: kategori;  align-self: center;}
+.kat-select {grid-area: select;  align-self: center;}
+.sub-button {grid-area: submit;  align-self: center;}
+
+form input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+form button {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #DAD0C2;
+    cursor: pointer;
+}
+
+form select {
+    outline: none;
+    background-color: white;
+    border: 1px solid #CCCCCC;
+}
+
+form button:active {background-color: #CDBBA7;}
+
+section.right {width: 50%;  height: 268px;}
+
+mini-info {
+    display: block;
+    position: relative;
+    top: 15px;
+    background-color: white;
+    padding: 10px;
+    padding-top: 5px;
+    width: 60%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid #CCCCCC;
+    transition: .3s;
+}
+
+mini-info:hover {
+    transform: translate(-2px,-2px);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* akhir up */
+
+
+
+
+
+/* awal down */
+section.menu-bar {
+    background-color: #F4DFD0;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.menu-bar div {display: flex;  align-items: center;}
+
+.menu-bar div h2 {margin-left: 20px;}
+
+.menu-bar select {
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.menu-bar select option {background-color: #F4DFD0;}
+
+.menu-bar select option:active {background-color: chocolate;}
+
+.about {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+/* akhir down */
+
+
+
+
+
+/* MEDIA QUERY */
+@media screen and (max-width: 900px) {
+    body {width: 90%;}
+
+    header {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+    }
+
+    section.right {height: 218px;}
+
+    mini-info {width: 70%;}
+}
+
+@media screen and (max-width: 600px) {
+    .up {
+        display: flex;
+        flex-direction: column-reverse;
+        box-sizing: border-box;
+        margin-top: 80px;
+        margin-bottom: 30px;
+    }
+
+    section.left,section.right {
+        padding: 0;
+        width: 100%;
+        height: 188px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {width: 100%;}
+
+    section.left {padding: 10px;  box-sizing: border-box;}
+
+    section.right {height: 178px;}
+
+    mini-info {width: 70%;}
+
+    header {
+        width: 100%;
+        left: 0;
+        right: 0;
+        border-radius: 0;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    header{height: 60px;}
+
+    .api-info {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .up {margin-top: 60px;}
+
+    section.menu-bar {padding-left: 10px;  padding-right: 10px;}
+}
+
+@media screen and (max-width: 350px) {
+    section.right {height: 168px;}
+
+    mini-info {width: 80%;}
+}

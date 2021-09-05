@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"rel="stylesheet">
+
+    <title>Favfood</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span class="material-icons-outlined">fastfood</span>
+            <h2>Favfood</h2>
+        </div>
+
+        <div class="api-info">
+            <h4>Limit : 
+                <span class="req-lim"></span> || 
+                <span class="time-lim"></span>
+            </h4>
+
+            <div class="refresh-button">Reset</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="up">
+            <section class="left">
+                <h2 class="form-title">Tambah makanan</h2>
+
+                <form action="">
+                    <input type="hidden" value="" class="id-input">
+                    <label for="nama" class="nama-label">Nama</label>
+                    <input type="text" name="nama" class="name-input" required="required">
+                    <label for="kategori" class="kat-label">Kategori</label>
+
+                    <select name="kategori-form" class="kat-select" id="kategori-form">
+                        <option value="Makanan">Makanan</option>
+                        <option value="Minuman">Minuman</option>
+                        <option value="Gorengan">Gorengan</option>
+                        <option value="Kue kering">Kue kering</option>
+                        <option value="Kue basah">Kue basah</option>
+                    </select>
+
+                    <button type="submit" class="sub-button">Simpan</button>
+                </form>
+            </section>
+
+            <section class="right">
+                <mini-info>
+                    <!-- ... -->
+                </mini-info>
+            </section>
+        </div>
+
+        <div class="down">
+            <section class="menu-bar">
+                <select name="kategori-list" id="" class="kategori-list">
+                    <option value="Semua">Semua</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Minuman">Minuman</option>
+                    <option value="Gorengan">Gorengan</option>
+                    <option value="Kue kering">Kue kering</option>
+                    <option value="Kue basah">Kue basah</option>
+                </select>
+            </section>
+
+                <grid-list>
+                    <!-- makanan-item -->
+                </grid-list>
+ 
+
+
+        </div>
+    </main>
+
+    <br><br><br><br>
+
+    <div class="about">
+        <p>Dibuat oleh : Rizkia A.S.</p>
+        <p>Tanggal : 14 Agustus 2021</p>
+        <p>API : </p>
+        <p>- <a href="https://crudcrud.com/" target="_blank">crudcrud.com</a></p>
+        <p>- <a href="https://www.themealdb.com/" target="_blank">themealdb.com</a></p>
+        <br>
+        <p>Endpoint : <span class="used-api"></span></p>
+        <p>Resources : /makanan</p>
+    </div>
+
+    <cs-footer>
+        <!-- ... -->
+    </cs-footer>
+</body>
+</html>
